@@ -1,0 +1,50 @@
+html {
+  box-sizing: border-box;
+}
+
+body {
+    margin: 0px;
+}
+
+a {
+  margin: 0 20px;
+  position: relative;
+}
+
+.tooltip {
+  width:300px;
+  height: 150px;
+  margin: auto;
+  text-align: center;
+  position: relative;
+  top: 100px;
+  background-color: grey;
+  border-radius: 20px;
+}
+
+.link {
+  position: relative;
+  width:100%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+
+a::after {
+  content: "RSS feed";
+  position: absolute;
+  background-color: #000;
+  padding: 10px 20px;
+  color: #fff;
+  border-radius: 15px;
+  top: 30px;
+  left: 50%;
+  font-family: monospace;
+  z-index: 99;
+  display: none;
+  transform: translateX(-50%);
+}
+
+ a:hover::after {
+  display: block;
+}
